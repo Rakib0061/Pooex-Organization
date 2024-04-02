@@ -1,0 +1,46 @@
+@use '../custom' as *;
+@use '../components/animation' as *;
+
+.btn {
+  display: inline-block;
+  border-radius: 0;
+  background-color: $darkCyan;
+  color: $white;
+  line-height: 3.4375rem;
+  @include padding(0 3.1875rem);
+  font-size: 0.875rem;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden;
+  border: none;
+  box-shadow:
+  inset -6.6em 0 0 0 $glow,
+  inset 6.6em 0 0 0 $glow;
+  transition: box-shadow 0.25s linear;
+  
+  &:hover {
+    box-shadow: none;
+    background-color: $darkCyan;
+    color: $white;
+  }
+
+  &:focus-visible {
+    background-color: $primary;
+    color: $white !important;
+    box-shadow: 0 0 10px 0 $primary;
+  }
+}
+
+.nav-link {
+  &:focus-visible {
+    background-color: $glow;
+    color: $white !important;
+    box-shadow: 0 0 10px 0 $primary;
+  }
+
+  &:visited {
+    color: $black;
+    background-color: $glow;
+  }
+}

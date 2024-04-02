@@ -1,0 +1,13 @@
+// IMPORT CUSTOM 
+@use "custom";
+
+// IMPORT COMPONENTS
+@use './components/button';
+@use './components/mixin';
+@use './components/typography';
+@use './components/animation';
+
+
+// IMPORT SECTIONS
+@use "./pageSection/navbar";
+@use "./pageSection/Homehero";

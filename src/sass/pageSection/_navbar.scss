@@ -1,0 +1,294 @@
+@use '../custom' as *;
+@use '../components/animation' as *;
+
+header {
+  .navbar {
+    // media query start
+    @include media-breakpoint-down(sm) {
+      background-color: $primary;
+    }
+    // media query end
+    .navbar-brand {
+      //  media query start
+      @include media-breakpoint-down(sm) {
+        background-color: transparent !important;
+        @include padding(0.75rem);
+      }
+      //  media query end
+      @include padding(2.1875rem 2rem 0.9375rem);
+      img {
+      }
+      &::before {
+        //  media query start
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+        //  media query end
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 0;
+        transform: translate(100%, 100%);
+        width: 3.75rem;
+        height: 1.5625rem;
+        background-color: $logoAppendex;
+        clip-path: polygon(100% 0, 0 0, 0 100%);
+      }
+      &::after {
+        //  media query start
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+        //  media query end
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1.5625rem;
+        background-color: $primary;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+      }
+    }
+
+    .navbar-toggler {
+      
+      .navbar-toggler-icon{
+        background-size: 200%;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22256px%22%20height%3D%22256px%22%20viewBox%3D%22-2.4%20-2.4%2028.80%2028.80%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke%3D%22%23ffffff%22%20transform%3D%22rotate(0)%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%20%3Cpath%20d%3D%22M5%208H13.75M5%2012H19M10.25%2016L19%2016%22%20stroke%3D%22%23ffffff%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%20%3C%2Fg%3E%3C%2Fsvg%3E");  
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .navbar-collapse {
+      .announcementBar {
+        background-color: $darkCyan;
+        @include padding(0.625rem 0 0.625rem 1.25rem);
+
+        .leftAnnouncebar {
+          p {
+            color: $navFont;
+            @include padding(0 1.25rem 0 0);
+          }
+          ul {
+            li {
+              @include padding(0 0.9375rem 0 0);
+
+              a {
+                i {
+                  color: $white;
+                  @include rfs(1rem);
+                  transition: color 0.2s linear;
+                }
+
+                &:hover i {
+                  color: $glow;
+                }
+              }
+            }
+          }
+        }
+        .rightAnnouncebar {
+          ul {
+            li {
+              a {
+                color: $navFont;
+                svg {
+                  @include margin(0 0.75rem 0 0);
+                }
+              }
+            }
+          }
+        }
+      }
+      .navBellow {
+        background-color: $white;
+        @include padding(0 0 0 1.25rem);
+        .rightNavbar {
+          ul {
+            li {
+              @include margin(0 1.875rem 0 0);
+              // fisrt list item ul tag should flex
+              &:nth-child(1) {
+                a {
+                }
+                ul {
+                  li {
+                    a {
+                      img {
+                      }
+                      button {
+                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                      }
+                      &:hover button {
+                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                      }
+                    }
+                  }
+                }
+
+                &:hover ul {
+                  display: flex;
+                }
+              }
+              a {
+                color: $navFont;
+                @include padding(2.0625rem 0);
+                @include rfs(1.0625rem);
+                font-weight: $font-weight-semibold;
+
+                // little dropdoen icon will not appear
+                &::after {
+                  display: none;
+                }
+              }
+              // Dropdoen
+              ul {
+                border: 0;
+                border-radius: inherit;
+                border-top: 2px solid $glow;
+
+                li {
+                  a {
+                    img {
+                    }
+                  }
+                }
+              }
+
+              &:hover .nav-link {
+                color: $black;
+              }
+
+              &:hover ul {
+                display: block;
+              }
+            }
+          }
+        }
+        .leftNavbar {
+          ul {
+            li {
+              @include margin(0 1.25rem 0 0);
+              @include padding(2.0625rem 0);
+
+              button {
+                svg {
+                }
+              }
+              a {
+                svg {
+                }
+              }
+              .phoneIcon {
+                @include margin(0 0.5rem 0 0);
+                svg {
+                }
+              }
+              .phoneNumber {
+                p {
+                  color: $gray;
+                  
+                }
+                a {
+                  text-decoration: underline;  
+                }
+
+                &:hover + .phoneIcon svg{
+                    animation: navPhone-shaking 0.2s linear infinite;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // search offcnvas button
+  .offcanvas {
+    background-color: $lightBlack;
+    border: none;
+    box-shadow: none;
+    &-top {
+      // @include padding(2.0625rem 0);
+      height: 62vh !important;
+    }
+    &-header {
+      // margin-bottom: 80px;
+      img {
+      }
+      .btn-close {
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' class='bi bi-x-lg' viewBox='0 0 16 16'%3E%3Cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z'/%3E%3C/svg%3E") !important;
+        }
+      }
+    }
+    &-body {
+      color: $navFont;
+      form {
+        input[type='search'] {
+          width: 100%;
+          background-color: transparent;
+          border-bottom: 2px solid $navFont;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          padding: 0.625rem 0;
+          color: $navFont;
+          background-image: none;
+          border: 0;
+          border-bottom: 2px solid $navFont;
+          border-radius: inherit;
+
+          &::placeholder {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            color: $navFont;
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+
+          &::-webkit-search-cancel-button {
+            appearance: none;
+          }
+        }
+
+        button {
+          right: 0;
+          transform: translate(0, -50%);
+          background-color: transparent;
+
+          i {
+            color: $navFont;
+            font-size: 1.3125rem;
+          }
+        }
+      }
+    }
+  }
+
+  //  navbar toggle offcanvas button
+  .custom-tooltip {
+    color: $navFont;
+    background-color: $secondary;
+  }
+}
