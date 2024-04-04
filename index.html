@@ -15,7 +15,8 @@
     <title>Poorex | Nonprofit Charity Organization</title>
     <link rel="canonical" href="https://poorex.com/" />
     <!-- CSS LINK START -->
-    <link rel="stylesheet" href="./src/sass/style.scss" />
+    <link rel="stylesheet" href="./css/stylemin.css" />
+    <!-- <link rel="stylesheet" href="./css/stylemin.css" /> -->
     <!-- CSS LINK END -->
     <!-- FAVICON LINK START -->
     <link
@@ -592,7 +593,7 @@
 
       <!-- 🔴 offcanvas for mobile device button toggle item start -->
       <div
-        class="offcanvas offcanvas-end"
+        class="offcanvas offcanvas-end show"
         tabindex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
@@ -614,7 +615,7 @@
         </div>
         <div class="offcanvas-body pt-0 offcanvas-end-body">
           <!-- for info p start -->
-          <p class="lead lead-small text-center mb-4">
+          <p class="lead lead-small text-center mb-5">
             Poorex is a charity organization dedicated to alleviating poverty,
             particularly among African and Somalian children living in
             impoverished conditions. Through various initiatives, we strive to
@@ -625,10 +626,10 @@
 
           <!-- for nav-link accrodia start -->
           <div class="accordion mb-5" id="accordionExample">
-            <div class="accordion-item">
+            <div class="accordion-item border-0 border-bottom bg-transparent">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button"
+                  class="accordion-button bg-transparent fw-semibold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -645,13 +646,14 @@
               >
                 <div class="accordion-body">
                   <ul class="nav">
-                    <li class="nav-item">
+                    <li class="nav-item position-relative mb-3">
                       <a
-                        class="nav-link position-relative"
+                        class="nav-link position-relative p-0"
                         aria-current="page"
                         href="#"
                       >
                         <img
+                          class="w-100"
                           src="./src/images/home1.webp"
                           alt="demo 1 page"
                           loading="lazy"
@@ -667,9 +669,10 @@
                         </button>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link position-relative" href="#">
+                    <li class="nav-item position-relative">
+                      <a class="nav-link position-relative p-0" href="#">
                         <img
+                          class="w-100"
                           src="./src/images/home2.webp"
                           alt="demo 2 page"
                           loading="lazy"
@@ -689,10 +692,10 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0 border-bottom bg-transparent">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -749,10 +752,10 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0 border-bottom bg-transparent">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
@@ -785,10 +788,10 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0 border-bottom bg-transparent">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFour"
@@ -815,10 +818,10 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0 border-bottom bg-transparent">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFive"
@@ -848,10 +851,10 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0 border-bottom bg-transparent">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSix"
@@ -866,152 +869,157 @@
           <!-- for nav-link accrodia end -->
 
           <!-- for contact section start -->
-          <ul class="nav justify-content-start flex-column mt-5 mb-5">
-            <li class="nav-item pe-4">
-              <a
-                class="nav-link lead lead-small p-0"
-                target="_blank"
-                href="https://maps.app.goo.gl/eN3TbXMrZ3xvQYMXA"
-                aria-label="office location"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="#fff"
-                  class="bi bi-geo-alt-fill"
-                  viewBox="0 0 16 16"
+          <div class="offcanvasaddressinfo">
+            <ul class="nav justify-content-start flex-column mt-5 mb-5">
+              <li class="nav-item pe-4">
+                <a
+                  class="nav-link lead lead-small p-0 text-white link-opacity-10 link-opacity-100-hover"
+                  target="_blank"
+                  href="https://maps.app.goo.gl/eN3TbXMrZ3xvQYMXA"
+                  aria-label="office location"
                 >
-                  <path
-                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
-                  />
-                </svg>
-                malabika tower, zia colony, Dhaka</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link lead lead-small p-0"
-                target="_blank"
-                href="mailto:poorexneed@gmail.com"
-                aria-label="need any help ? send a mail"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="#fff"
-                  class="bi bi-envelope-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
-                  />
-                </svg>
-                poorexneedhelp@gmail.com</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link lead lead-small p-0"
-                target="_blank"
-                href="tel:+880 170 890 3261"
-                aria-label="our hot line number"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 256 256"
-                  xml:space="preserve"
-                >
-                  <defs></defs>
-                  <g
-                    style="
-                      stroke: none;
-                      stroke-width: 0;
-                      stroke-dasharray: none;
-                      stroke-linecap: butt;
-                      stroke-linejoin: miter;
-                      stroke-miterlimit: 10;
-                      fill: none;
-                      fill-rule: nonzero;
-                      opacity: 1;
-                    "
-                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+                  <svg
+                    class="me-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="#fff"
+                    class="bi bi-geo-alt-fill"
+                    viewBox="0 0 16 16"
                   >
                     <path
-                      d="M 20.334 2 c 0.392 0 0.761 0.212 0.963 0.552 l 11.285 19.017 c 0.199 0.336 0.208 0.759 0.024 1.103 l -6.997 13.034 c -1.077 2.006 -0.719 4.434 0.891 6.044 l 10.876 10.876 l 10.876 10.876 c 0.967 0.967 2.254 1.5 3.623 1.5 c 0.842 0 1.679 -0.211 2.422 -0.609 l 13.034 -6.997 c 0.163 -0.087 0.346 -0.133 0.53 -0.133 c 0.201 0 0.399 0.054 0.572 0.157 l 19.017 11.285 c 0.487 0.289 0.683 0.895 0.457 1.409 c -1.654 3.763 -4.605 10.528 -5.789 13.547 c -0.147 0.374 -0.34 0.667 -0.575 0.871 C 78.885 86.833 75.455 88 71.345 88 c -11.841 0 -28.805 -9.608 -44.271 -25.074 C 17.172 53.024 9.436 42.21 5.291 32.476 C 2.19 25.191 -0.297 15.111 5.47 8.459 c 0.204 -0.235 0.497 -0.429 0.871 -0.575 C 9.36 6.7 16.125 3.748 19.888 2.095 C 20.031 2.032 20.181 2 20.334 2 M 20.334 0 c -0.419 0 -0.844 0.085 -1.25 0.264 C 15.386 1.889 8.607 4.847 5.611 6.022 C 4.98 6.269 4.402 6.637 3.958 7.149 c -10.986 12.674 2.4 37.89 21.701 57.191 C 40.159 78.84 57.994 90 71.345 90 c 4.421 0 8.353 -1.225 11.506 -3.958 c 0.512 -0.444 0.88 -1.022 1.127 -1.652 c 1.175 -2.996 4.133 -9.775 5.758 -13.473 c 0.635 -1.444 0.089 -3.128 -1.268 -3.933 L 69.452 55.699 c -0.49 -0.291 -1.041 -0.437 -1.593 -0.437 c -0.507 0 -1.015 0.123 -1.476 0.371 L 53.349 62.63 c -0.465 0.25 -0.972 0.371 -1.476 0.371 c -0.809 0 -1.608 -0.314 -2.208 -0.914 L 38.789 51.211 L 27.913 40.335 c -0.974 -0.974 -1.194 -2.471 -0.543 -3.684 l 6.997 -13.034 c 0.517 -0.964 0.493 -2.129 -0.066 -3.07 L 23.017 1.531 C 22.438 0.556 21.405 0 20.334 0 L 20.334 0 z"
-                      style="
-                        stroke: none;
-                        stroke-width: 1;
-                        stroke-dasharray: none;
-                        stroke-linecap: butt;
-                        stroke-linejoin: miter;
-                        stroke-miterlimit: 10;
-                        fill: #fff;
-                        fill-rule: nonzero;
-                        opacity: 1;
-                      "
-                      transform=" matrix(1 0 0 1 0 0) "
-                      stroke-linecap="round"
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
                     />
+                  </svg>
+                  malabika tower, zia colony, Dhaka</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link lead lead-small p-0 text-white"
+                  target="_blank"
+                  href="mailto:poorexneed@gmail.com"
+                  aria-label="need any help ? send a mail"
+                >
+                  <svg
+                    class="me-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="#fff"
+                    class="bi bi-envelope-fill"
+                    viewBox="0 0 16 16"
+                  >
                     <path
-                      d="M 42.5 2.042 C 67.105 3.065 86.935 22.895 87.958 47.5 h -5.005 C 81.936 25.654 64.346 8.064 42.5 7.046 V 2.042 M 40.5 0 v 9 C 62.832 9 81 27.168 81 49.5 h 9 C 90 22.206 67.794 0 40.5 0 L 40.5 0 z"
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                    />
+                  </svg>
+                  poorexneedhelp@gmail.com</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link lead lead-small p-0 text-white"
+                  target="_blank"
+                  href="tel:+880 170 890 3261"
+                  aria-label="our hot line number"
+                >
+                  <svg
+                    class="me-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 256 256"
+                    xml:space="preserve"
+                  >
+                    <defs></defs>
+                    <g
                       style="
                         stroke: none;
-                        stroke-width: 1;
+                        stroke-width: 0;
                         stroke-dasharray: none;
                         stroke-linecap: butt;
                         stroke-linejoin: miter;
                         stroke-miterlimit: 10;
-                        fill: #fff;
+                        fill: none;
                         fill-rule: nonzero;
                         opacity: 1;
                       "
-                      transform=" matrix(1 0 0 1 0 0) "
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M 42.5 19.566 C 57.451 20.555 69.445 32.549 70.434 47.5 h -5.013 C 64.451 35.306 54.694 25.549 42.5 24.579 V 19.566 M 40.5 17.5 v 9 c 12.683 0 23 10.318 23 23 h 9 C 72.5 31.855 58.145 17.5 40.5 17.5 L 40.5 17.5 z"
-                      style="
-                        stroke: none;
-                        stroke-width: 1;
-                        stroke-dasharray: none;
-                        stroke-linecap: butt;
-                        stroke-linejoin: miter;
-                        stroke-miterlimit: 10;
-                        fill: #fff;
-                        fill-rule: nonzero;
-                        opacity: 1;
-                      "
-                      transform=" matrix(1 0 0 1 0 0) "
-                      stroke-linecap="round"
-                    />
-                  </g>
-                </svg>
-                +880 170 890 3261</a
-              >
-            </li>
-          </ul>
+                      transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+                    >
+                      <path
+                        d="M 20.334 2 c 0.392 0 0.761 0.212 0.963 0.552 l 11.285 19.017 c 0.199 0.336 0.208 0.759 0.024 1.103 l -6.997 13.034 c -1.077 2.006 -0.719 4.434 0.891 6.044 l 10.876 10.876 l 10.876 10.876 c 0.967 0.967 2.254 1.5 3.623 1.5 c 0.842 0 1.679 -0.211 2.422 -0.609 l 13.034 -6.997 c 0.163 -0.087 0.346 -0.133 0.53 -0.133 c 0.201 0 0.399 0.054 0.572 0.157 l 19.017 11.285 c 0.487 0.289 0.683 0.895 0.457 1.409 c -1.654 3.763 -4.605 10.528 -5.789 13.547 c -0.147 0.374 -0.34 0.667 -0.575 0.871 C 78.885 86.833 75.455 88 71.345 88 c -11.841 0 -28.805 -9.608 -44.271 -25.074 C 17.172 53.024 9.436 42.21 5.291 32.476 C 2.19 25.191 -0.297 15.111 5.47 8.459 c 0.204 -0.235 0.497 -0.429 0.871 -0.575 C 9.36 6.7 16.125 3.748 19.888 2.095 C 20.031 2.032 20.181 2 20.334 2 M 20.334 0 c -0.419 0 -0.844 0.085 -1.25 0.264 C 15.386 1.889 8.607 4.847 5.611 6.022 C 4.98 6.269 4.402 6.637 3.958 7.149 c -10.986 12.674 2.4 37.89 21.701 57.191 C 40.159 78.84 57.994 90 71.345 90 c 4.421 0 8.353 -1.225 11.506 -3.958 c 0.512 -0.444 0.88 -1.022 1.127 -1.652 c 1.175 -2.996 4.133 -9.775 5.758 -13.473 c 0.635 -1.444 0.089 -3.128 -1.268 -3.933 L 69.452 55.699 c -0.49 -0.291 -1.041 -0.437 -1.593 -0.437 c -0.507 0 -1.015 0.123 -1.476 0.371 L 53.349 62.63 c -0.465 0.25 -0.972 0.371 -1.476 0.371 c -0.809 0 -1.608 -0.314 -2.208 -0.914 L 38.789 51.211 L 27.913 40.335 c -0.974 -0.974 -1.194 -2.471 -0.543 -3.684 l 6.997 -13.034 c 0.517 -0.964 0.493 -2.129 -0.066 -3.07 L 23.017 1.531 C 22.438 0.556 21.405 0 20.334 0 L 20.334 0 z"
+                        style="
+                          stroke: none;
+                          stroke-width: 1;
+                          stroke-dasharray: none;
+                          stroke-linecap: butt;
+                          stroke-linejoin: miter;
+                          stroke-miterlimit: 10;
+                          fill: #fff;
+                          fill-rule: nonzero;
+                          opacity: 1;
+                        "
+                        transform=" matrix(1 0 0 1 0 0) "
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M 42.5 2.042 C 67.105 3.065 86.935 22.895 87.958 47.5 h -5.005 C 81.936 25.654 64.346 8.064 42.5 7.046 V 2.042 M 40.5 0 v 9 C 62.832 9 81 27.168 81 49.5 h 9 C 90 22.206 67.794 0 40.5 0 L 40.5 0 z"
+                        style="
+                          stroke: none;
+                          stroke-width: 1;
+                          stroke-dasharray: none;
+                          stroke-linecap: butt;
+                          stroke-linejoin: miter;
+                          stroke-miterlimit: 10;
+                          fill: #fff;
+                          fill-rule: nonzero;
+                          opacity: 1;
+                        "
+                        transform=" matrix(1 0 0 1 0 0) "
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M 42.5 19.566 C 57.451 20.555 69.445 32.549 70.434 47.5 h -5.013 C 64.451 35.306 54.694 25.549 42.5 24.579 V 19.566 M 40.5 17.5 v 9 c 12.683 0 23 10.318 23 23 h 9 C 72.5 31.855 58.145 17.5 40.5 17.5 L 40.5 17.5 z"
+                        style="
+                          stroke: none;
+                          stroke-width: 1;
+                          stroke-dasharray: none;
+                          stroke-linecap: butt;
+                          stroke-linejoin: miter;
+                          stroke-miterlimit: 10;
+                          fill: #fff;
+                          fill-rule: nonzero;
+                          opacity: 1;
+                        "
+                        transform=" matrix(1 0 0 1 0 0) "
+                        stroke-linecap="round"
+                      />
+                    </g>
+                  </svg>
+                  +880 170 890 3261</a
+                >
+              </li>
+            </ul>
+          </div>
           <!-- for contact section end -->
 
-          <!-- get update deection start -->
+          <!-- get update section start -->
           <form
             class="row justify-content-center needs-validation topFooterRight mt-5 mb-5"
             novalidate=""
           >
             <fieldset>
-              <legend>Get Update</legend>
+              <legend class="lead lead-small mb-3">Get Update</legend>
 
               <!-- form main part start -->
               <div class="col-xl-12">
                 <div class="input-group has-validation position-relative">
                   <input
                     type="email"
-                    class="form-control rounded-0 z-0"
+                    class="form-control rounded-0 z-0 p-3 fs-6 fw-medium text-white bg-transparent border-0 me-5"
                     placeholder="Enter Mail"
                     pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{3,4}$"
                     id="validationCustomUsername"
@@ -1019,18 +1027,16 @@
                     required=""
                   />
                   <small
-                    class="invalid-feedback d-flex justify-content-between align-items-center position-absolute m-0 text-danger bottom-0"
+                    class="invalid-feedback justify-content-between align-items-center position-absolute m-0 text-danger bottom-0"
                     id="inputGroupPrepend"
                   >
                     please make a valid mail
-                    <a class="nav-link nav-link--a text-danger" href="#"
-                      >learn more?</a
-                    >
+                    <a class="nav-link text-danger" href="#">learn more?</a>
                   </small>
                   <button
                     type="submit"
                     aria-label="submit your email"
-                    class="btn d-flex justify-content-center align-items-center z-1 position-absolute top-50 end-0 translate-middle-y h-100 p-0"
+                    class="btn d-flex justify-content-center align-items-center z-1 position-absolute top-50 end-0 translate-middle-y h-100 p-3"
                   >
                     <i class="fa-brands fa-telegram text-white"></i>
                   </button>
@@ -1039,7 +1045,45 @@
               <!-- form main part end -->
             </fieldset>
           </form>
-          <!-- get update deection end -->
+          <!-- get update section end -->
+          <!-- social media section start -->
+          <div class="offcanvasSociaIcon mb-5">
+            <ul class="nav justify-content-center align-items-center">
+              <li class="nav-item me-3">
+                <a
+                  class="nav-link rounded-pill"
+                  href="#"
+                  aria-label="facebook icon"
+                  ><i class="fa-brands fa-facebook-f fs-6"></i
+                ></a>
+              </li>
+              <li class="nav-item me-3">
+                <a
+                  class="nav-link rounded-pill"
+                  href="#"
+                  aria-label="instagram icon"
+                  ><i class="fa-brands fa-instagram fs-6"></i
+                ></a>
+              </li>
+              <li class="nav-item me-3">
+                <a
+                  class="nav-link rounded-pill"
+                  href="#"
+                  aria-label="twitter icon"
+                  ><i class="fa-brands fa-twitter fs-6"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link rounded-pill"
+                  href="#"
+                  aria-label="pinterest icon"
+                  ><i class="fa-brands fa-pinterest-p fs-6"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- get update section end -->
         </div>
       </div>
       <!-- 🔴 offcanvas for mobile device button toggle item end -->
