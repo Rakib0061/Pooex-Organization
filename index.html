@@ -49,10 +49,10 @@
   <body>
     <!-- HEADER PART START -->
     <header>
-      <nav class="navbar navbar-expand-md py-0">
+      <nav class="navbar navbar-expand-lg py-0">
         <div class="container-fluid px-0 align-items-stretch">
           <a
-            class="navbar-brand m-0 bg-primary d-flex justify-content-center align-items-center position-relative"
+            class="navbar-brand m-0 bg-primary d-flex justify-content-center align-items-center position-relative z-3"
             href="#"
           >
             <picture>
@@ -64,19 +64,34 @@
                 media="(max-width:575px)"
                 srcset="./src/images/minilogo.webp"
               />
-              <img src="./src/images/logo.webp" alt="Poorex logo" />
+              <img
+                src="./src/images/logo.webp"
+                sizes="(min-width: 575px) 214px,(max-width:575px) 141px"
+                alt="Poorex logo"
+              />
             </picture>
           </a>
-          <button
-            class="navbar-toggler border-0 rounded-0"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="d-flex">
+            <!-- will see only md device DONATE NOW button -->
+            <a
+              role="button"
+              class="btn d-none d-xl-none d-lg-none d-md-block d-sm-none me-4"
+              href="./src/pages/donateNow.html"
+            >
+              Donate Now
+            </a>
+            <!-- will see onlymd device DONATE NOW button -->
+            <button
+              class="navbar-toggler border-0 rounded-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div
             class="collapse navbar-collapse flex-column align-items-stretch"
             id="navbarSupportedContent"
@@ -84,8 +99,10 @@
             <div
               class="announcementBar row m-0 justify-content-between align-items-center"
             >
-              <div class="col-xl-5 col-lg-12 ps-0">
-                <div class="leftAnnouncebar d-flex align-items-center">
+              <div class="col-xl-5 col-lg-5 ps-0">
+                <div
+                  class="leftAnnouncebar d-flex align-items-xl-center align-items-lg-start flex-xl-row flex-lg-column"
+                >
                   <p class="lead lead-small">Connect with our charity</p>
                   <!-- social media icon-->
                   <ul class="nav d-flex align-items-center">
@@ -122,7 +139,7 @@
                   <!-- social media icon-->
                 </div>
               </div>
-              <div class="col-xl col-lg-12">
+              <div class="col-xl col-lg">
                 <div class="rightAnnouncebar">
                   <!-- location and mail -->
                   <ul class="nav justify-content-end">
@@ -176,7 +193,7 @@
               </div>
             </div>
             <div class="navBellow row m-0 justify-content-between">
-              <div class="col xl-6 ps-0">
+              <div class="col-xl-6 col-lg-7 ps-0">
                 <div class="rightNavbar">
                   <ul class="navbar-nav">
                     <li class="nav-item dropdown">
@@ -377,7 +394,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col xl-6">
+              <div class="col-xl-6 col-lg">
                 <div
                   class="leftNavbar d-flex align-items-center justify-content-end"
                 >
@@ -442,9 +459,13 @@
                     <li
                       class="nav-item d-flex justify-content-center align-items-center p-0"
                     >
-                      <button class="btn" href="./src/pages/donateNow.html">
+                      <a
+                        role="button"
+                        class="btn"
+                        href="./src/pages/donateNow.html"
+                      >
                         Donate Now
-                      </button>
+                      </a>
                     </li>
                     <li
                       class="nav-item d-flex align-items-center flex-row-reverse m-0 p-0"
@@ -545,13 +566,13 @@
       </nav>
       <!-- 🔴 offcanvas search item start -->
       <div
-        class="offcanvas offcanvas-top border-0"
+        class="offcanvas offcanvas-top px-5 border-0"
         tabindex="-1"
         id="offcanvasTop"
         aria-labelledby="offcanvasTopLabel"
       >
         <div
-          class="offcanvas-header offcanvas-top-header justify-content-between mb-5"
+          class="offcanvas-header offcanvas-top-header justify-content-between mb-5 px-5"
         >
           <a class="offcanvas-title" id="offcanvasTopLabel">
             <img
@@ -559,8 +580,8 @@
               class="img-fluid"
               loading="lazy"
               decoding="async"
-              width=""
-              height=""
+              width="183"
+              height="40"
               alt="brand logo"
             />
           </a>
@@ -571,7 +592,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body mt-5 offcanvas-top-body">
+        <div class="offcanvas-body mt-5 px-5 offcanvas-top-body">
           <form class="position-relative" role="search">
             <input
               class="form-control"
@@ -593,7 +614,7 @@
 
       <!-- 🔴 offcanvas for mobile device button toggle item start -->
       <div
-        class="offcanvas offcanvas-end show"
+        class="offcanvas offcanvas-end"
         tabindex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
@@ -601,8 +622,10 @@
         <div class="offcanvas-header mb-2 offcanvas-end-header">
           <img
             src="./src/images/footerlogo.webp"
-            alt=""
-            sizes=""
+            class="img-fluid"
+            width="183"
+            height="40"
+            alt="brand logo"
             loading="lazy"
             decoding="async"
           />
@@ -851,7 +874,9 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item border-0 border-bottom bg-transparent">
+            <div
+              class="accordion-item border-0 rounded-bottom-0 border-bottom bg-transparent"
+            >
               <h2 class="accordion-header">
                 <button
                   class="accordion-button collapsed fw-semibold bg-transparent"
@@ -1088,15 +1113,218 @@
       </div>
       <!-- 🔴 offcanvas for mobile device button toggle item end -->
     </header>
-
     <!-- HEADER PART END -->
 
     <!-- MAIN PART START -->
     <main>
       <!--  @@@@@@@@@@@@ HERO AREA START @@@@@@@@@@@@  -->
       <section class="heroArea">
-        <div class="container">
-          <div class="row"></div>
+        <div class="container-fluid p-0">
+          <!-- carosul part start -->
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide position-relative"
+            aria-hidden="true"
+          >
+            <!-- data-bs-ride="carousel" -->
+            <div class="carousel-inner">
+              <!-- carosul item 1 -->
+              <div
+                class="carousel-item placeholder-wave position-relative active"
+                data-bs-interval="10000"
+              >
+                <img
+                  class="w-100 object-fit-cover placeholder"
+                  width="1920"
+                  height="820"
+                  loading="lazy"
+                  decoding="async"
+                  src="./src/images/Homehero/slider-bg-1-1.webp"
+                  alt="a starving boy's poor gaze"
+                />
+                <div class="slider-body position-absolute top-50">
+                  <h1 class="display-1 text-white">
+                    <span class="display-1--intro">
+                      We are here to support you every steps
+                    </span>
+                    <span class="display-1--desc">
+                      Giving Help To Those Who Need It
+                    </span>
+                  </h1>
+                  <div class="actionArea position-relative">
+                    <button class="btn bg-primary">Discover More</button>
+                    <img
+                      width="114"
+                      height="90"
+                      loading="lazy"
+                      decoding="async"
+                      src="./src/images/Homehero/twistedArrow.webp"
+                      class="w-50 position-absolute top-100"
+                      alt="twisted arrow indicate to action button"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- carosul item 2 -->
+              <div
+                class="carousel-item placeholder-wave position-relative"
+                data-bs-interval="2000"
+              >
+                <img
+                  class="w-100 object-fit-cover placeholder"
+                  width="1920"
+                  height="820"
+                  loading="lazy"
+                  decoding="async"
+                  src="./src/images/Homehero/slider-bg-1-2.webp"
+                  alt="a starving boy's poor gaze"
+                />
+                <div
+                  class="slider-body position-absolute top-50"
+                >
+                  <h1 class="display-1 text-white">
+                    <span class="display-1--intro">
+                      We are here to support you every steps
+                    </span>
+                    <span class="display-1--desc">
+                      Giving Help To Those Who Need It
+                    </span>
+                  </h1>
+                  <div class="actionArea position-relative">
+                    <button class="btn bg-primary">
+                      Discover More
+                    </button>
+                    <img
+                      width="114"
+                      height="90"
+                      loading="lazy"
+                      decoding="async"
+                      src="./src/images/Homehero/twistedArrow.webp"
+                      class="w-50  position-absolute top-100"
+                      alt="twisted arrow indicate to action button"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- carosul item 3 -->
+              <div class="carousel-item placeholder-wave position-relative">
+                <img
+                  class="w-100 object-fit-cover placeholder"
+                  width="1920"
+                  height="820"
+                  loading="lazy"
+                  decoding="async"
+                  src="./src/images/Homehero/slider-bg-1-3.webp"
+                  alt="a starving boy's poor gaze"
+                />
+                <div
+                  class="slider-body position-absolute top-50"
+                >
+                  <h1 class="display-1 text-white ">
+                    <span class="display-1--intro">
+                      We are here to support you every steps
+                    </span>
+                    <span class="display-1--desc">
+                      Giving Help To Those Who Need It
+                    </span>
+                  </h1>
+                  <div class="actionArea position-relative">
+                    <button class="btn bg-primary">
+                      Discover More
+                    </button>
+                    <img
+                      width="114"
+                      height="90"
+                      loading="lazy"
+                      decoding="async"
+                      src="./src/images/Homehero/twistedArrow.webp"
+                      class="w-50 position-absolute top-100"
+                      alt="twisted arrow indicate to action button"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- carosul accessories -->
+            <button
+              class="carousel-control-prev position-absolute z-3"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next position-absolute z-3"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <!-- carosul accessories -->
+
+            <!-- carosul shape animation start -->
+            <div class="carosul-shape">
+              <!-- blue shape -->
+              <svg
+                class="position-absolute end-0 bottom-0 z-2 opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Layer_1"
+                x="0px"
+                y="0px"
+                width="100%"
+                viewBox="0 0 131 506"
+                enable-background="new 0 0 131 506"
+                xml:space="preserve"
+              >
+                <path
+                  fill="#07847F"
+                  opacity="1.000000"
+                  stroke="none"
+                  d=" M1.000000,224.000000   C1.000000,222.611115 1.000000,221.222214 1.358692,219.303665   C2.809086,215.271851 4.310367,211.840073 4.925982,208.256134   C8.903847,185.098297 16.357613,163.003815 26.156027,141.787170   C38.811695,114.383659 54.752686,88.945984 73.268143,65.012604   C89.236389,44.371788 106.840675,25.279684 124.944878,6.582801   C126.851547,4.613708 128.976379,2.855854 131.000000,1.000000   C131.333328,2.333333 131.953781,3.665918 131.957260,5.000112   C132.016769,27.833290 132.000000,50.666668 132.000000,73.500000   C132.000000,216.500000 132.003036,359.500000 131.958572,502.500000   C131.958115,504.000092 131.333344,505.500000 130.415802,506.673218   C116.347946,492.189728 102.389481,478.448608 89.524498,463.750397   C78.362999,450.998474 68.073532,437.430664 58.057232,423.741577   C43.808792,404.268524 32.599506,383.000336 22.978170,360.892151   C13.882266,339.991333 7.408283,318.337036 3.925417,295.783356   C3.410836,292.451111 1.997511,289.257660 1.000000,286.000000   C1.000000,285.555542 1.000000,285.111115 1.342313,284.212830   C1.456418,282.506012 1.228211,281.253021 1.000002,280.000000   C1.000000,263.979095 1.000000,247.958206 1.368779,231.312866   C1.491705,228.458954 1.245852,226.229477 1.000000,224.000000  z"
+                />
+              </svg>
+              <!-- oange shape -->
+              <svg
+                class="position-absolute end-0 bottom-0 z-1 opacity-25"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Layer_1"
+                x="0px"
+                y="0px"
+                width="100%"
+                viewBox="0 0 535 507"
+                enable-background="new 0 0 535 507"
+                xml:space="preserve"
+              >
+                <path
+                  fill="#FE7F4C"
+                  opacity="1.000000"
+                  stroke="none"
+                  d=" M1.000003,507.500000   C2.478900,505.688873 4.240632,504.586548 5.388811,503.031281   C11.018051,495.406128 19.105173,492.307922 27.859512,490.052124   C61.925785,481.274048 95.289894,470.248352 127.663788,456.543182   C153.302063,445.689453 178.822754,434.403198 203.667023,421.865204   C240.271698,403.392212 275.325714,382.120361 307.602814,356.713348   C326.859009,341.555756 345.844452,325.937073 363.813843,309.297028   C379.675659,294.608673 394.787750,278.914734 408.720459,262.391174   C424.340271,243.866806 439.322418,224.608398 452.626923,204.383286   C466.012268,184.035309 478.189453,162.678268 488.700439,140.712753   C499.683380,117.760963 508.933258,93.863487 517.277710,69.802681   C523.835999,50.892094 527.841431,31.097900 533.051453,11.715205   C533.555298,9.840795 534.558044,8.100474 535.664551,6.148954   C536.000000,173.333328 536.000000,340.666656 536.000000,508.000000   C357.666656,508.000000 179.333328,508.000000 1.000003,507.500000  z"
+                />
+                <path
+                  fill="#FE7F4C"
+                  opacity="1.000000"
+                  stroke="none"
+                  d=" M536.000000,4.500002   C535.666626,3.917363 535.333313,2.834719 535.000000,1.376035   C535.333374,1.999996 535.666687,2.999997 536.000000,4.500002  z"
+                />
+              </svg>
+            </div>
+            <!-- carosul shape animation end -->
+          </div>
+          <!-- carosul part end -->
         </div>
       </section>
       <!--  @@@@@@@@@@@@ HERO AREA END @@@@@@@@@@@@  -->

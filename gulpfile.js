@@ -20,7 +20,7 @@ function compreseImage() {
     .pipe(webP())
     .pipe(dest('src/images'))
     .on('end', () => {
-      del.deleteSync(['src/images/*.{jpg,png}', '!src/images/*.webp']);
+      del.deleteSync(['src/images/**/*.{jpg,png}', '!src/images/**/*.webp']);
     });
 }
 

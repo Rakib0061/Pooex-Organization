@@ -9,17 +9,18 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
 // ✅Customize some defaults
 $cyan: #07847f;
-$cyanbg : #047470;
+$cyanbg: #047470;
 $darkCyan: #1e3737;
 $orange: #fe7f4c;
 $customBlack: #1e3737;
 $gray: #8b9e9e;
 $lightBlack: rgb(0, 0, 0, 0.9);
-$opacityBlack : #242427;
+$opacityBlack: #242427;
+$headingBG: rgba(255, 255, 255, 0.06);
 
 // theme color base on 60%, 30%, 10% palate :
 $primary: $cyan;
-$logoAppendex : $cyanbg;
+$logoAppendex: $cyanbg;
 $secondary: $darkCyan;
 $glow: $orange;
 $navFont: $gray;
@@ -34,8 +35,8 @@ $font: $customBlack;
 @import '../../node_modules/bootstrap/scss/root';
 @import '../../node_modules/bootstrap/scss/reboot';
 
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
 @import '../../node_modules/bootstrap/scss/containers';
 @import '../../node_modules/bootstrap/scss/grid';
 // @import "../../node_modules/bootstrap/scss/tables";
@@ -50,7 +51,7 @@ $font: $customBlack;
 // ✅Requires nav
 // @import "../../node_modules/bootstrap/scss/card";
 // @import "../../node_modules/bootstrap/scss/breadcrumb";
-@import "../../node_modules/bootstrap/scss/accordion";
+@import '../../node_modules/bootstrap/scss/accordion';
 // @import "../../node_modules/bootstrap/scss/pagination";
 // @import "../../node_modules/bootstrap/scss/badge";
 // @import "../../node_modules/bootstrap/scss/alert";
@@ -63,12 +64,12 @@ $font: $customBlack;
 // ✅Requires transitions
 @import '../../node_modules/bootstrap/scss/tooltip';
 // @import '../../node_modules/bootstrap/scss/popover';
-// @import "../../node_modules/bootstrap/scss/carousel";
+@import '../../node_modules/bootstrap/scss/carousel';
 // @import "../../node_modules/bootstrap/scss/spinners";
 @import '../../node_modules/bootstrap/scss/offcanvas';
 
 // ✅Requires transitions
-// @import '../../node_modules/bootstrap/scss/placeholders';
+@import '../../node_modules/bootstrap/scss/placeholders';
 
 // ✅Helpers
 // @import "../../node_modules/bootstrap/scss/helpers";

@@ -38,7 +38,6 @@ Array.from(tooltipTriggerList).map(
           event.preventDefault();
           event.stopPropagation();
         }
-
         form.classList.add('was-validated');
       },
       false,
@@ -46,3 +45,14 @@ Array.from(tooltipTriggerList).map(
   });
 })();
 // 🔴form validation functionality end
+
+// 🔴placeholder remover on load functionality start
+const placeholder = document.querySelectorAll(
+  '.placeholder,.placeholder-wave,.placeholder-glow',
+);
+window.addEventListener('load', () => {
+  placeholder.forEach((vlu) => {
+    vlu.classList.remove('placeholder', 'placeholder-wave', 'placeholder-glow');
+  });
+});
+// 🔴placeholder remover on load functionality end

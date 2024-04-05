@@ -1,0 +1,117 @@
+@use '../custom' as *;
+
+.heroArea {
+  .carousel {
+    &-inner {
+      .carousel-item {
+        img {
+          // media query start
+          @include media-breakpoint-down(md) {
+            object-position: 70%;
+          }
+          // media query end
+        }
+        .slider-body {
+          // media query start
+          @include media-breakpoint-down(md){
+            padding: 0 0 0 1.25rem;
+            left: 0;
+            transform: translate(0, -50%);
+          }
+          // media query end
+          left: 35%;
+          transform: translate(-35%, -50%);
+          h1 {
+            span {
+              
+              &:nth-child(2){
+                // media quary start
+                @include media-breakpoint-down(lg){
+                  padding: 0 0 2rem;
+                }
+                @include media-breakpoint-down(md){
+                  padding: 0;
+                  line-height: normal;
+                }
+                // media quary end
+              }
+            }
+          }
+          .actionArea {
+            width: fit-content;
+            button {
+            }
+            img {
+              // media query start
+              @include media-breakpoint-down(md){
+                width: 25%;
+              }
+              // media query end
+              transform: translate(50%, -100%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-control-prev {
+    // media query start
+    @include media-breakpoint-down(md){
+      top: 80%;
+      left: 0;
+      transform: translate(0,-80%);
+      background-color: $black;
+    }
+    // media query end
+    background-image: none;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    height: fit-content;
+    &-icon {
+      width: fill-available;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2032%2032%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22256px%22%20height%3D%22256px%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23ffffff%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%20%3Cline%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A0.48%3Bstroke-miterlimit%3A10%3B%22%20x1%3D%226%22%20y1%3D%2216%22%20x2%3D%2228%22%20y2%3D%2216%22%3E%3C%2Fline%3E%20%3Cpolyline%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A0.48%3Bstroke-miterlimit%3A10%3B%22%20points%3D%2211.515%2C22%205.515%2C16%2011.515%2C10%20%22%3E%3C%2Fpolyline%3E%20%3C%2Fg%3E%3C%2Fsvg%3E');
+    }
+  }
+  .carousel-control-next {
+    // media query start
+    @include media-breakpoint-down(md){
+      top: 80%;
+      transform: translate(0,-80%);
+      background-color: $black;
+    }
+    // media query end
+    background-image: none;
+    top: 57%;
+    right: 0;
+    transform: translate(0, -57%);
+    height: fit-content;
+    &-icon {
+      width: fill-available;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2032%2032%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22256px%22%20height%3D%22256px%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23ffffff%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%20%3Cline%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A0.48%3Bstroke-miterlimit%3A10%3B%22%20x1%3D%2226%22%20y1%3D%2216%22%20x2%3D%224%22%20y2%3D%2216%22%3E%3C%2Fline%3E%20%3Cpolyline%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A0.48%3Bstroke-miterlimit%3A10%3B%22%20points%3D%2220.485%2C10%2026.485%2C16%2020.485%2C22%20%22%3E%3C%2Fpolyline%3E%20%3C%2Fg%3E%3C%2Fsvg%3E');
+    }
+  }
+
+  .carosul-shape {
+    svg {
+      &:nth-child(1) {
+        // media query start
+        @include media-breakpoint-down(md){
+          width: 15%;
+        }
+        // media query end
+        width: 10%;
+      }
+      &:nth-child(2) {
+        width: 40%;
+      }
+    }
+  }
+}

@@ -15,9 +15,9 @@
   overflow: hidden;
   border: none;
   box-shadow:
-  inset -6.6em 0 0 0 $glow,
-  inset 6.6em 0 0 0 $glow;
-  transition: box-shadow 0.25s linear;
+  inset -8.6em 0 0 0 $glow,
+  inset 8.6em 0 0 0 $glow;
+  transition: box-shadow 0.35s linear;
   
   &:hover {
     box-shadow: none;
