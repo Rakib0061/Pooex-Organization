@@ -8,7 +8,7 @@ header {
       background-color: $primary !important;
     }
     @include media-breakpoint-down(lg) {
-      background-color: $lightBlack;
+      background-color: $darkCyan;
     }
     // media query end
     .navbar-brand {
