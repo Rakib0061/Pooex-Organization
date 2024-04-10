@@ -6,7 +6,7 @@
   margin: 0;
 
   &-big {
-    @include rfs(1.125rem);
+    @include rfs(1rem);
     line-height: 1.75rem;
   }
   &-small {
@@ -46,11 +46,34 @@
 }
 
 .display-3 {
-  @include padding(2.5rem 5.5rem);
-  border-radius: 3rem 3rem 3rem 0;
-  @include margin(0 0 2rem);
-  @include rfs(3.125rem);
-  font-weight: $font-weight-bold;
+  &--intro{
+    display: block;
+    @include rfs(16px);
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    position: relative;
+    color: $glow;
+    @include margin(0 0 17px);
+    
+    &:after {
+      position: absolute;
+      content: "";
+      width: 2.5rem;
+      height: 0.125rem;
+      background: linear-gradient(to right, $primary 0%,$primary 70%,$glow 70%, $glow 100%);
+      top: 50%;
+      left: 32%;
+      transform: translate(-32%, -50%);
+    }
+  }
+  &--desc{
+    display: inline-block;
+    @include rfs(50px);
+    font-weight: $font-weight-bold;
+    color: $black;
+    @include margin(0 0 32px);
+    line-height: 1.2;
+  }
 }
 
 .display-4 {

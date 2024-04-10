@@ -13,7 +13,7 @@
         }
         .slider-body {
           // media query start
-          @include media-breakpoint-down(md){
+          @include media-breakpoint-down(md) {
             padding: 0 0 0 1.25rem;
             left: 0;
             transform: translate(0, -50%);
@@ -23,13 +23,12 @@
           transform: translate(-35%, -50%);
           h1 {
             span {
-              
-              &:nth-child(2){
+              &:nth-child(2) {
                 // media quary start
-                @include media-breakpoint-down(lg){
+                @include media-breakpoint-down(lg) {
                   padding: 0 0 2rem;
                 }
-                @include media-breakpoint-down(md){
+                @include media-breakpoint-down(md) {
                   padding: 0;
                   line-height: normal;
                 }
@@ -43,7 +42,7 @@
             }
             img {
               // media query start
-              @include media-breakpoint-down(md){
+              @include media-breakpoint-down(md) {
                 width: 25%;
               }
               // media query end
@@ -57,10 +56,10 @@
 
   .carousel-control-prev {
     // media query start
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       top: 80%;
       left: 0;
-      transform: translate(0,-80%);
+      transform: translate(0, -80%);
       background-color: $black;
     }
     // media query end
@@ -79,9 +78,9 @@
   }
   .carousel-control-next {
     // media query start
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       top: 80%;
-      transform: translate(0,-80%);
+      transform: translate(0, -80%);
       background-color: $black;
     }
     // media query end
@@ -103,14 +102,14 @@
     svg {
       &:nth-child(1) {
         // media query start
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           width: 15%;
         }
         // media query end
         width: 10%;
       }
       &:nth-child(2) {
-        width: 40%; 
+        width: 40%;
       }
     }
   }

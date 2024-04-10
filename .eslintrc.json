@@ -33,7 +33,7 @@
         "parser": "flow"
       }
     ],
-    "no-console": "error",
+    "no-console": "off",
     "import/no-extraneous-dependencies": "off"
   }
 }

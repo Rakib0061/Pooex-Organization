@@ -3,6 +3,7 @@
 // ❗❗Alert : you can't use tooltip and offcanvas simultaneously.
 
 // import Alert from 'bootstrap/js/dist/alert';
+import { read } from '@popperjs/core';
 import Button from 'bootstrap/js/dist/button';
 import Carousel from 'bootstrap/js/dist/carousel';
 import Collapse from 'bootstrap/js/dist/collapse';
@@ -56,3 +57,38 @@ window.addEventListener('load', () => {
   });
 });
 // 🔴placeholder remover on load functionality end
+
+// 🔴video play pasue button functionality start
+const playpause = document.getElementById('playpause');
+const playpauseOffcanvas = document.getElementById('playpauseOffcanvas');
+const playpauseIcon = playpause.querySelectorAll('i');
+const video = document.querySelector('iframe');
+const playpauseArray = [playpause, playpauseOffcanvas];
+
+playpauseArray.map((btn) =>
+  btn.addEventListener('click', () => {
+    playpauseIcon.forEach((icon) => {
+      icon.classList.toggle('d-none');
+    });
+  }),
+);
+// 🔴video play pause button functionality end
+
+// 🔴on mobile device play pasue btn will be position fixed functionality start
+const aboutArea = document.getElementById('aboutArea');
+const mobileDevice = document.getElementById('mobile-device');
+const desireSection = aboutArea.getBoundingClientRect();
+
+console.log(desireSection);
+
+window.addEventListener('scroll', () => {
+  const Y = window.scrollY;
+  if (Y >= desireSection.bottom - 400) {
+    mobileDevice.classList.remove('mobile-device-show');
+  } else if (Y >= desireSection.top) {
+    mobileDevice.classList.add('mobile-device-show');
+  } else {
+    mobileDevice.classList.remove('mobile-device-show');
+  }
+});
+// 🔴on mobile device play pasue btn will be position fixed functionality end

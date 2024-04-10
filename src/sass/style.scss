@@ -1,5 +1,5 @@
-// IMPORT CUSTOM 
-@use "custom";
+// IMPORT CUSTOM
+@use 'custom';
 
 // IMPORT COMPONENTS
 @use './components/button';
@@ -7,8 +7,8 @@
 @use './components/typography';
 @use './components/animation';
 
-
 // IMPORT SECTIONS
-@use "./pageSection/navbar";
-@use "./pageSection/Homehero";
-@use "./pageSection/HomeFeature";
+@use './pageSection/navbar';
+@use './pageSection/HomeHero';
+@use './pageSection/HomeFeature';
+@use './pageSection/HomeAbout';

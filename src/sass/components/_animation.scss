@@ -1,9 +1,47 @@
-@use "../custom" as * ;
+@use '../custom' as *;
 
 @keyframes navPhone-shaking {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-  } 
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes palse-border {
+  0% {
+    transform: translate(-50%,-50%) scale(.0) ;
+    opacity: .1
+}
+50% {   
+    opacity: .9
+}
+
+100% {
+    transform: translate(-50%,-50%) scale(0.8) ;
+    opacity: .1
+}
+}
+
+@keyframes palse {
+  0% {
+    box-shadow: 0 0 0 0 $glow;
+  }
+  70% {
+    // for wider shadow you can change the value
+    box-shadow: 0 0 0 20px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
